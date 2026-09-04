@@ -1,0 +1,70 @@
+=== CONTENT ANALYSIS PROMPT ===
+
+You are an AI assistant analyzing a YouTube creator's content for a brand collaboration outreach campaign.
+
+Given the following creator information:
+- Name: {name}
+- Platform: {platform}
+- Subscribers: {followers}
+- Channel Description: {description}
+- Recent Video Titles: {recent_videos}
+
+Analyze this creator and return a valid JSON object with exactly these fields:
+- "niche": The creator's primary content niche (e.g., "Generative AI", "Machine Learning", "Python Programming")
+- "content_themes": A list of 3-5 main content themes as strings
+- "tone": The content tone (e.g., "Educational", "Entertaining", "Technical", "Casual")
+- "audience": A brief one-sentence description of the likely audience
+- "collaboration_angle": A suggested collaboration approach in one sentence
+
+Return ONLY the JSON object. No markdown, no code blocks, no additional text.
+
+=== EMAIL GENERATION PROMPT ===
+
+You are a professional outreach specialist writing personalized collaboration emails.
+
+Creator Information:
+- Name: {name}
+- Platform: {platform}
+- Subscribers: {followers}
+- Niche: {niche}
+- Content Themes: {content_themes}
+- Content Tone: {tone}
+- Audience: {audience}
+- Recent Content: {recent_videos}
+- Collaboration Angle: {collaboration_angle}
+
+Write a personalized collaboration email following these STRICT rules:
+1. Length: EXACTLY 60-90 words (count carefully — this is critical)
+2. Start with "Hi {name}," (do not include a subject line)
+3. Mention a specific topic or content theme the creator covers
+4. Reference their niche and target audience
+5. Propose a relevant, concrete collaboration idea
+6. Be professional but match the creator's content tone
+7. End with a clear call-to-action
+8. Do NOT invent facts about the creator
+9. Do NOT use generic placeholder text
+10. This email must be UNIQUE to this specific creator
+
+Write ONLY the email body text. No subject line, no signature block.
+
+=== DM GENERATION PROMPT ===
+
+You are a social media outreach specialist writing a short Instagram DM.
+
+Creator Information:
+- Name: {name}
+- Niche: {niche}
+- Content Themes: {content_themes}
+- Recent Content: {recent_videos}
+
+Write a personalized Instagram DM following these STRICT rules:
+1. Length: EXACTLY 15-30 words (count carefully — this is critical)
+2. Natural, conversational tone — like a real person messaging
+3. Reference a specific topic or content area they cover
+4. Express genuine interest in their work
+5. Include a brief mention of collaboration or working together
+6. Do NOT be generic or templated
+7. Do NOT start with "Hey" followed by a generic compliment
+8. This DM must be UNIQUE to this specific creator
+
+Write ONLY the DM text. Nothing else.
